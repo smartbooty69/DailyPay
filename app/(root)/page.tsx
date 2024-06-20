@@ -1,10 +1,11 @@
 import HeaderBox from '@/components/HeaderBox'
+import RightSidebar from '@/components/RightSidebar';
 import TotalBalanceBox from '@/components/TotalBalanceBox';
 import { Section } from 'lucide-react'
 import React from 'react'
 
 const Home = () => {
-  const loggedIn = { firstName: 'Clancy'};
+  const loggedIn = { firstName: 'Clancy', lastName: 'Mendonca', email: 'clancymendonca@gmail.com'};
   return (
     <section className="home">
       <div className="home-content">
@@ -21,7 +22,15 @@ const Home = () => {
             totalCurrentBalance={1250.35}
           />
         </header>
+
+        RECENT TRANSACTION
       </div>
+
+      <RightSidebar
+        user={loggedIn}
+        transactions={[]}
+        banks={[{ currentBalance:123.50 }, { currentBalance:500.30 }]}
+      />
     </section>
   )
 }
