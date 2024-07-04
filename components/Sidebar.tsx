@@ -18,10 +18,10 @@ const Sidebar = ({ user }: SiderbarProps) => {
                         src="/icons/logo.svg"
                         width={34}
                         height={34}
-                        alt="Horizon logo"
+                        alt="Daily Pay logo"
                         className="size-[24px] max-xl:size-14"
                     />
-                    <h1 className="sidebar-logo">Horizon</h1>
+                    <h1 className="sidebar-logo">Daily Pay</h1>
                 </Link>
 
                 {sidebarLinks.map((item)=> {
