@@ -22,7 +22,7 @@ import CustomInput from "./CustomInput"
 import { authFormSchema } from "@/lib/utils"
 import { Loader2 } from "lucide-react"
 import { useRouter } from "next/navigation"
-import { signIn, signUp } from "@/lib/actions/user.action"
+import { getLoggedInUser, signIn, signUp } from "@/lib/actions/user.action"
 
 const AuthForm = ({ type }: { type: string }) => {
     const router = useRouter();
@@ -85,13 +85,13 @@ const AuthForm = ({ type }: { type: string }) => {
                     {user 
                         ? 'Link Account'
                         : type === 'sign-in'
-                        ? 'Sign In'
-                        : 'Sign Up'
+                            ? 'Sign In'
+                            : 'Sign Up'
                     }
                     <p className="text-16 font-normal text-gray-600">
                         {user 
-                        ? 'Link your account to get started'
-                        : 'Please enter your details'
+                            ? 'Link your account to get started'
+                            : 'Please enter your details'
                         }
                     </p>  
                     </h1>
